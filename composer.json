@@ -1,0 +1,18 @@
+{
+    "name": "thijsvanderheijden/adventofcode",
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thijsvanderheijden\\Adventofcode\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thijs van der Heijden",
+            "email": "thijsvanderheijden@yoast.com"
+        }
+    ],
+    "require": {}
+}
