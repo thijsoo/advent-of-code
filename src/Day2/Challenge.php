@@ -18,9 +18,55 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$depth = 0;
+		$horizontal = 0;
+
+		foreach ($this->lines as $line){
+			$split = explode(' ', $line);
+			$command = $split[0];
+			$value = $split[1];
+			switch($command){
+				case 'forward':
+					$horizontal += $value;
+					break;
+				case 'down':
+					$depth += $value;
+					break;
+				case 'up':
+					$depth -= $value;
+					break;
+			}
+		}
+
+
+
+		dd($horizontal * $depth);
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+		$depth = 0;
+		$horizontal = 0;
+		$aim = 0;
+
+		foreach ($this->lines as $line){
+			$split = explode(' ', $line);
+			$command = $split[0];
+			$value = $split[1];
+			switch($command){
+				case 'forward':
+					$horizontal += $value;
+					$depth += ($aim * $value);
+					break;
+				case 'down':
+					$aim += $value;
+					break;
+				case 'up':
+					$aim -= $value;
+					break;
+			}
+		}
+
+
+
+		dd($horizontal * $depth);
 	}
 }

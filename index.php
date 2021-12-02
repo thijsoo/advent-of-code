@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 $day = $argv[1];
-$challange = $argv[2];
+$challange = (int) $argv[2];
 
 $cname = "Thijsvanderheijden\Adventofcode\Day{$day}\Challenge";
 $d1 = new $cname();
