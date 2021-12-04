@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day7;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -17,10 +17,11 @@ class Challenge extends ChallengeBase {
 		parent::__construct();
 	}
 
-	public function solveFirst(  ) {
-		dump('wowfirst');
+	public function solveFirst() {
+		dump( 'wowfirst' );
 	}
-	public function solveSecond(  ) {
-		dump('wowsecond');
+
+	public function solveSecond() {
+		dump( 'wowsecond' );
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day5;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
