@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day4;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,9 +18,21 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$input = $this->lines[0];
+		unset( $this->lines[0], $this->lines[1] );
+
+		$bingoSolver = new BingoSolver($input,$this->lines);
+
+		dd($bingoSolver->solve());
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+
+			$input = $this->lines[0];
+			unset( $this->lines[0], $this->lines[1] );
+
+			$bingoSolver = new BingoSolver($input,$this->lines);
+
+			dd($bingoSolver->solve2());
+
 	}
 }
