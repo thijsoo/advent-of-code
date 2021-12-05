@@ -1,6 +1,7 @@
 <?php
 
 require 'vendor/autoload.php';
+
 $day = $argv[1];
 $challange = (int) $argv[2];
 

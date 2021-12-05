@@ -3,7 +3,6 @@
 
 namespace Thijsvanderheijden\Adventofcode\Day5;
 
-
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
 
 class Challenge extends ChallengeBase {
@@ -18,9 +17,14 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$generator = new HydroHorizonalVerticalPathGenerator($this->lines);
+		$map = $generator->generatePath();
+		dd($map->getAmountOfMultiples());
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+		$generator = new HydroHorizonalVerticalDiagonalPathGenerator();
+		$generator->setInput($this->lines);
+		$map = $generator->generatePath();
+		dd($map->getAmountOfMultiples());
 	}
 }
