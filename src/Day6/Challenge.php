@@ -18,7 +18,9 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$spawner = new LanternFishSpawner($this->lines[0]);
+		$fish = $spawner->countFish();
+		dd($fish);
 	}
 	public function solveSecond(  ) {
 		dump('wowsecond');
