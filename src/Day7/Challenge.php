@@ -18,10 +18,17 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst() {
-		dump( 'wowfirst' );
+		$crabAligner = new CrabHorizonalAligner(explode(',',$this->lines[0]));
+		$fuel = $crabAligner->calculateFuelCost($crabAligner->calculateOptimalPosition());
+
+		dd($fuel);
 	}
 
 	public function solveSecond() {
-		dump( 'wowsecond' );
+		$crabAligner = new CrabExpoAligner(explode(',',$this->lines[0]));
+		$fuel = $crabAligner->calculateFuel();
+
+		dd($fuel);
+
 	}
 }
