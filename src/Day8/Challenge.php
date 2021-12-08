@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day8;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,9 +18,18 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$c = new CollectionCounter($this->lines);
+		dd($c->countUniqueInstances());
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+		$c = 0;
+		foreach ($this->lines as $line) {
+			$decoder = new Decoder( $line );
+			$decoder->createWiringMatrix();
+			$c += $decoder->decodeAndCount();
+		}
+
+
+		dd($c);
 	}
 }
