@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day9;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,9 +18,13 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$riskcal = new RiskCalculator($this->lines);
+		$c = $riskcal->calcRisk();
+		dd($c);
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+		$riskcal = new RiskCalculator($this->lines);
+		$calc = $riskcal->calc($riskcal->getAllCompleteBasins());
+dd($calc);
 	}
 }
