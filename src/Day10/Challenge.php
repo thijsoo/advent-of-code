@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day10;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,9 +18,11 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$syntaxChecker = new SyntaxChecker($this->lines);
+		dd($syntaxChecker->getSyntaxScore());
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+		$syntaxChecker = new SyntaxChecker($this->lines);
+		dd($syntaxChecker->getCompletedScore());
 	}
 }
