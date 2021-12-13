@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day13;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,9 +18,24 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$f = new PaperFolder($this->lines);
+        $f->createMatrix();
+        $d = $f->getDirections();
+
+
+        $f->fold($d[0]['direction'], $d[0]['position']);
+        dd($f->countMarks());
 	}
 	public function solveSecond(  ) {
-		dump('wowsecond');
+        $f = new PaperFolder($this->lines);
+       $f->createMatrix();
+        $d = $f->getDirections();
+
+        foreach ($d as $key => $dd) {
+            $f->fold($dd['direction'], $dd['position']);
+            //$f->renderMatrix($f->getMatrix());
+        }
+        $f->renderMatrix($f->getMatrix());
+        dd($f->countMarks());
 	}
 }
