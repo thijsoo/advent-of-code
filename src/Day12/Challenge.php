@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Thijsvanderheijden\Adventofcode\Day1;
+namespace Thijsvanderheijden\Adventofcode\Day12;
 
 
 use Thijsvanderheijden\Adventofcode\Base\ChallengeBase;
@@ -18,7 +18,8 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-		dump('wowfirst');
+		$g = new Graph($this->lines);
+        dd($g->findTotalPaths());
 	}
 	public function solveSecond(  ) {
 		dump('wowsecond');
