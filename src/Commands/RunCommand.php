@@ -64,9 +64,10 @@ class RunCommand extends Command
         $d1 = new $cname();
 
         if($part === 1) {
-            $d1->solveFirst();
-        }else{
-            $d1->solveSecond();
+            $output->writeln($d1->solveFirst());
+
+        }else {
+            $output->writeln( $d1->solveSecond());
         }
 
 

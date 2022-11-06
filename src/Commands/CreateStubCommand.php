@@ -22,12 +22,14 @@ class CreateStubCommand extends Command
 
     protected function configure(): void
     {
+        (new Dotenv())->usePutenv()->bootEnv(dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '.env');
+        $defaultYear = getenv('DEFAULT_YEAR') ?? date('Y');
+
         $this
             // configure an argument
-            ->addArgument('year', InputArgument::REQUIRED, 'The year for the stub.')
-            ->addArgument('day', InputArgument::REQUIRED, 'The day for the stub.')
-            ->addArgument('input', InputArgument::OPTIONAL, 'If the input should be loaded (default: true)',true)
-        ;
+            ->addArgument('day', InputArgument::OPTIONAL, 'The day for the stub.', (int)date('d'))
+            ->addArgument('year', InputArgument::OPTIONAL, 'The year for the stub.', $defaultYear)
+            ->addArgument('input', InputArgument::OPTIONAL, 'If the input should be loaded (default: true)', true);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
