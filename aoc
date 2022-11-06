@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+
+require 'vendor/autoload.php';
+
+$application = new Application();
+$application->add(new \Thijsvanderheijden\Adventofcode\Commands\CreateStubCommand());
+$application->add(new \Thijsvanderheijden\Adventofcode\Commands\RunCommand());
+$application->add(new \Thijsvanderheijden\Adventofcode\Commands\TestCommand());
+$application->run();

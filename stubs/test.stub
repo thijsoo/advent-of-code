@@ -1,0 +1,13 @@
+<?php
+
+namespace Thijsvanderheijden\Adventofcode\Days\Year${year}\Day${day}\tests;
+
+use PHPUnit\Framework\TestCase;
+
+class Day${day}Test extends TestCase {
+
+	protected function setUp(): void {
+		parent::setUp();
+
+	}
+}

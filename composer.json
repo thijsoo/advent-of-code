@@ -12,7 +12,12 @@
     "authors": [
         {
             "name": "Thijs van der Heijden",
-            "email": "thijsvanderheijden@yoast.com"
+            "email": "thijsvanderheijden2@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "symfony/console": "^6.1",
+        "symfony/dotenv": "^6.1",
+      "ext-curl": "*"
+    }
 }

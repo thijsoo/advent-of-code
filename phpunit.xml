@@ -15,7 +15,8 @@
         >
     <testsuites>
         <testsuite name="AdventOfCode">
-            <directory suffix="Test.php">/tests/</directory>
+            <directory suffix="Test.php">src/Days/Year2021/**/tests/</directory>
+            <directory suffix="Test.php">src/Days/Year2015/**/tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
