@@ -110,6 +110,7 @@ class CreateStubCommand extends Command
             $this->output->writeln('Input file already exists.');
             return;
         }
+
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -121,7 +122,7 @@ class CreateStubCommand extends Command
         curl_close($curl);
 
 
-        file_put_contents($inputFile, trim($input));
+        file_put_contents($inputFile, $input);
     }
 
     private function createTests($targetDir, $day, $year)
