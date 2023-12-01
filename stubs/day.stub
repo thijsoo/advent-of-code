@@ -13,7 +13,9 @@ class Challenge extends ChallengeBase {
 	}
 
 	public function solveFirst(  ) {
-	    dd($this->lines);
+	    foreach($this->lines as $line) {
+	        dd($line);
+	    }
 	}
 	public function solveSecond(  ) {
 
